@@ -47,12 +47,14 @@ public class GameController : MonoBehaviour
     private void InstantiatePlayer(Player player)
     {
         GameObject playerGameObject = Instantiate(PlayerPrefab, PlayersContainer);
-        playerGameObject.transform.position = new Vector2(player.x, player.y);
+        playerGameObject.transform.position = new Vector2(player.x, player.y);        
         playerGameObject.GetComponent<GamePlayer>().Id = player.Id;
-        playerGameObject.GetComponent<GamePlayer>().Username = player.Id;
+        playerGameObject.GetComponent<GamePlayer>().Username = player.Username;
+
         TextMeshProUGUI usernameText = playerGameObject.GetComponentInChildren<TextMeshProUGUI>();
         usernameText.text = player.Username;
-        
+
+        PlayersToRender[player.Id] = playerGameObject.transform;
     }
 
     private void UpdateState(string json)
