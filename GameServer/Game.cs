@@ -173,7 +173,7 @@ namespace GameServer
                     Id = Guid.NewGuid().ToString(),
                     x = random.Next(10, WorldWidth - 10),
                     y = random.Next(10, WorldHeigh - 10),
-                    Radius = 10,
+                    Radius = 20,
                     Points = 1
                 };
                 State.Coins.Add(coin);
