@@ -27,7 +27,7 @@ namespace GameServer
     }
     internal class Game
     {
-        const int WorldWidth = 500;
+        const int WorldWidth = 400;
         const int WorldHeigh = 400;
         const int LoopPeriod = 10;
         const int MaxCoins = 15;
@@ -122,7 +122,7 @@ namespace GameServer
                     {
                         player.Speed++;
                         player.Score += coin.Points;
-                        Console.WriteLine(player.Username+":"+player.Score);
+                        Console.WriteLine("-"+player.Username+" |Score:"+player.Score+" |Speed:"+player.Speed);
                         return false;
                     }
                 }).ToList();
