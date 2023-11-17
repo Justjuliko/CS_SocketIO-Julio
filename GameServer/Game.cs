@@ -120,6 +120,7 @@ namespace GameServer
                     }
                     else
                     {
+                        player.Speed++;
                         player.Score += coin.Points;
                         Console.WriteLine(player.Username+":"+player.Score);
                         return false;

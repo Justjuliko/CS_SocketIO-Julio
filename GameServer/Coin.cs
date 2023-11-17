@@ -26,7 +26,9 @@ namespace GameServer
                 return dx*dx + dy*dy <= rSum*rSum;
             }
             else
-            { return false; }
+            { 
+                return false; 
+            }
         }
     }
 }
